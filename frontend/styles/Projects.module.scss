@@ -1,0 +1,56 @@
+.projects {
+  background-color: #b8e4ff;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    color: #004d73;
+    margin-bottom: 2rem;
+  }
+
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: #d90060;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: white;
+      background: #d90060;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+
+      &:hover {
+        background: #a30045;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: #0a0a0f; // o un degradado si querés
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); // línea blanca sutil
+  z-index: 1000;
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      color: #f2a6c1;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+}
