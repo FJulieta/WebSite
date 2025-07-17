@@ -3,26 +3,55 @@
   top: 0;
   width: 100%;
   padding: 1rem 2rem;
-  background: #0a0a0f; // o un degradado si querés
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); // línea blanca sutil
+  background: #0a0a0f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
 
   nav ul {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 15rem;
     list-style: none;
-    margin: 0;
     padding: 0;
 
     li a {
+      position: relative;
       color: #f2a6c1;
       text-decoration: none;
       font-weight: 600;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      padding: 0.3rem 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: -18%;
+        bottom: -4px;
+        width: 130%;
+        height: 2px;
+        background-image: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.7),
+          rgba(255, 255, 255, 0.4),
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0)
+        );
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+        opacity: 0;
+      }
 
       &:hover {
         color: #ffffff;
+      }
+
+      &:hover::after {
+        transform: scaleX(1);
+        opacity: 1;
       }
     }
   }

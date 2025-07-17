@@ -1,6 +1,6 @@
 .hero {
   height: 100vh;
-  background: radial-gradient(ellipse at center, #0a0a0f, #000);
+  background: radial-gradient(ellipse at center, #b15d90, #000);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,14 +9,20 @@
 
 .card {
   background: #0a0a0f;
-  border-radius: 16px;
-  padding: 3rem 2rem;
-  max-width: 800px;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  max-width: 500px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 30px 30px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  transform: translateX(30px) translateY(-50px);
+
 }
+
 
 /* Títulos */
 .titleGradient {
@@ -36,7 +42,7 @@
   background: linear-gradient(90deg, #e0e0e0, #f2a6c1, #ff4ec5, #a178e4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 1.2rem;
+  margin-top: 0.6rem;
   opacity: 0;
 }
 
@@ -55,6 +61,7 @@
     opacity: 0;
     transform: translateX(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -66,6 +73,7 @@
     opacity: 0;
     transform: translateX(100%);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -77,13 +85,13 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Clases de animación */
 .slideInLeft {
   animation: slideInLeft 1.2s ease-out forwards;
 }
@@ -94,4 +102,38 @@
 
 .fadeIn {
   animation: fadeIn 1.8s ease-out forwards;
+}
+
+.console {
+  margin: 2rem auto 0 auto;
+  margin-top: 2rem;
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  color: #f2f2f2;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  max-width: fit-content;
+  border-left: 3px solid #f2a6c1;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation-delay: 2s;
+  transform: translate(-20px, 50px);
+
+}
+
+.dollar {
+  color: #7fff00;
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+@keyframes fadeOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

@@ -8,10 +8,46 @@ export default function Header() {
     <header className={styles.header}>
       <nav>
         <ul>
-          <li><Link to="hero" smooth={true} duration={500}>Home</Link></li>
-          <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-          <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
-          <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+          <li>
+            <Link
+              to="hero"
+              smooth={true}
+              duration={500}
+              className={styles.navLink}
+            >
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="about"
+              smooth={true}
+              duration={500}
+              className={styles.navLink}
+            >
+              ABOUT
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              className={styles.navLink}
+            >
+              PROJECTS
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className={styles.navLink}
+            >
+              CONTACT
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

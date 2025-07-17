@@ -1,19 +1,121 @@
+.about-outer {
+  position: relative;
+  overflow-x: clip;
+  background: #0a0a0f;
+}
+
+.about-wrapper {
+  transform: skewY(-3deg);
+  transform-origin: top left;
+  background: linear-gradient(
+    to bottom,
+    #e6e6e6 0%,
+    #dcdcdc 25%,
+    #898686 50%,
+    #696767 75%,
+    #4f4d4d 100%
+  );
+}
+
 .about {
-  min-height: 100vh;
-  background: #e79eff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+
+  transform: skewY(3deg);
+  padding: 6rem 2rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  padding: 4rem 2rem;
-  color: #222;
+  align-items: center;
+  min-height: 100vh;
 
-  h2 {
-    font-size: 2rem;
+  .cardWrapper {
+    position: relative;
+    transform: translateX(30px) translateY(-60px);
+  }
+
+  .sticker {
+    position: absolute;
+    top: -4.5rem;
+    left: -2rem;
+    background-color: #f2a6c1;
+    color: #0a0a0f;
+    font-size: 5.2rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 0.5rem;
+    transform: rotate(-3deg);
+    box-shadow:
+      0 8px 24px rgba(0, 0, 0, 0.4),
+      0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+
+    // 🎀 Cinta adhesiva
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: -1;
+    }
+
+    &::before {
+      top: -6px;
+      left: -12px;
+      transform: rotate(15deg);
+    }
+
+    &::after {
+      bottom: -3px;
+      right: -12px;
+      transform: rotate(-15deg);
+    }
+  }
+
+  .card {
+    padding: 3rem;
+    max-width: 700px;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #131212;
+    background: rgba(0, 0, 0, 0.312);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .h2 {
+    font-size: 10.2rem;
+    margin-bottom: 1.5rem;
+    color: #f2a6c1;
+  }
+
+  .p {
+    font-size: 1.4rem;
+    line-height: 1.7;
     margin-bottom: 1rem;
+    background: linear-gradient(
+      to right,
+      #1a1a1a,
+      #3f3f3f,
+      #b15d90,
+      #f2a6c1
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
-  p {
-    font-size: 1.1rem;
-    max-width: 600px;
-  }
+  .quote {
+  font-style: italic;
+  font-size: 1.39rem;
+  color: #eee;
+  font-family: 'Playfair Display', serif;
+  margin-top: 4rem;         // más espacio arriba
+  margin-left: auto;        // empuja hacia la derecha
+  text-align: right;        // alinea el texto a la derecha
+  display: block;           // asegura que respete los márgenes
+  max-width: 90%;           // que no ocupe todo el ancho
+  padding-right: 2rem;      // separa un poco del borde derecho
+}
 }

@@ -14,7 +14,6 @@ const projects = [
     image: '/images/qrcode.png',
     link: 'https://github.com/FJulieta/pet-qr'
   },
-  // Agregá más proyectos acá
 ];
 
 export default function Projects() {
