@@ -1,0 +1,48 @@
+.marqueeWrapper {
+  overflow: hidden;
+  position: relative;
+  transform: skewY(-3deg);
+  padding: 2rem 0;
+}
+
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.icons {
+  display: flex;
+  gap: 3rem;
+  padding: 0 2rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #f2a6c1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 70%;
+  &:hover {
+    transform: scale(1.3);
+    background: linear-gradient(135deg, #ff85d5, #e79eff, #b8e4ff, #aa00ff, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-shadow: 0 0 20px #e79eff, 0 0 30px #aa00ff;
+    cursor: pointer;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

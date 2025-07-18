@@ -233,8 +233,8 @@
 
 .thankYouMessage {
   position: fixed;
-  top: 55%;
-  left: 50%;
+  top: -50%;
+  left: 25%;
   transform: translate(-50%, -50%) rotate(-2deg);
   background-color: rgba(255, 240, 246, 0.7);
   color: #0a0a0f;
@@ -242,10 +242,9 @@
   padding: 2.5rem 3rem 2rem 3rem;
   border-radius: 1rem;
   font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   font-style: italic;
   text-align: center;
-  z-index: 9999;
   backdrop-filter: blur(6px);
   box-shadow:
     0 12px 30px rgba(0, 0, 0, 0.3),
@@ -259,11 +258,13 @@
 }
 
 .muffinSticker {
+  top: 55%;
   position: absolute;
-  bottom: -20px;
-  left: 50%;
+  bottom: -25px;
+  left: 45%;
   transform: translateX(-50%) rotate(6deg);
   font-size: 5rem;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   animation: bounceSticker 1s ease;
+  box-shadow: rgba(0, 0, 0, 0.9),
 }

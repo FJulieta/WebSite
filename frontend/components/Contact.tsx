@@ -43,15 +43,15 @@ export default function Contact() {
         <ParticlesBackground />
       </div>
 
+
+
+      <div className={styles.speechBubble}>Let’s talk! 👩‍💻</div>
       {showThankYou && (
         <div className={styles.thankYouMessage}>
           <span className={styles.muffinSticker}>🧁</span>
           <p>Message sent! Thanks for reaching out — here’s a muffin for you!</p>
         </div>
       )}
-
-      <div className={styles.speechBubble}>Let’s talk! 👩‍💻</div>
-
       <form ref={form} className={styles.form} onSubmit={sendEmail}>
         <input type="text" name="user_name" placeholder="Your Name" className={styles.input} required />
         <input type="email" name="user_email" placeholder="Your Email" className={styles.input} required />

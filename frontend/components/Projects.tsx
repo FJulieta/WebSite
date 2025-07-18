@@ -1,45 +1,62 @@
-import Slider from 'react-slick';
 import styles from '../styles/Projects.module.scss';
-
-const projects = [
-  {
-    title: 'Sticky Notes App',
-    description: 'A notes app built with React, Next.js and NestJS.',
-    image: '/images/notes.png',
-    link: 'https://github.com/FJulieta/sticky-notes'
-  },
-  {
-    title: 'QR Code Pet ID',
-    description: 'Create scannable QR tags for pets with their contact info.',
-    image: '/images/qrcode.png',
-    link: 'https://github.com/FJulieta/pet-qr'
-  },
-];
+import Marquee from './TechMarquee';
 
 export default function Projects() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+  const projectList = [
+    {
+      title: 'Postita App',
+      description: 'Sticky notes app made with React, Next.js and Sass.',
+      tech: ['React', 'Next.js', 'Sass']
+    },
+    {
+      title: 'QR Pet Tags',
+      description: 'QR code system for pet identification and recovery.',
+      tech: ['Node.js', 'NestJS', 'PostgreSQL']
+    },
+    {
+      title: 'Another',
+      description: '...',
+      tech: ['TypeScript', 'Framer Motion', 'Next.js']
+    },
+     {
+      title: 'Another One',
+      description: '...',
+      tech: ['TypeScript', 'Framer Motion', 'Next.js']
+    },
+     {
+      title: 'In Progress',
+      description: '...',
+      tech: ['TypeScript', 'Framer Motion', 'Next.js']
+    },
+     {
+      title: 'Another',
+      description: '...',
+      tech: ['TypeScript', 'Framer Motion', 'Next.js']
+    },
+     {
+      title: 'Lumenbyte Web',
+      description: 'Creative portfolio website for tech innovation.',
+      tech: ['TypeScript', 'Framer Motion', 'Next.js']
+    }
+  ];
 
   return (
-    <section id="projects" className={styles.projects}>
-      <h2>Projects</h2>
-      <Slider {...settings}>
-        {projects.map((project, index) => (
+    <section className={styles.projectsSection}>
+      <h2 className={styles.title}>My Projects</h2>
+
+      <div className={styles.projectsCarousel}>
+        {projectList.map((project, index) => (
           <div key={index} className={styles.card}>
-            <img src={project.image} alt={project.title} />
             <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a>
+            <div className={styles.description}>
+              <p>{project.description}</p>
+              <span>{project.tech.join(', ')}</span>
+            </div>
           </div>
         ))}
-      </Slider>
+      </div>
+
+      <Marquee />
     </section>
   );
 }

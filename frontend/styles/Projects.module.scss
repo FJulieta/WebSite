@@ -1,56 +1,81 @@
-.projects {
-  background-color: #b8e4ff;
-  padding: 4rem 2rem;
+.projectsSection {
+  background: linear-gradient(to bottom right, #0a0a0f, #1a1a1f);
+  color: #fff;
+  padding: 6rem 2rem;
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  transform: skewY(3deg);
+}
 
-  h2 {
-    font-size: 2rem;
-    color: #004d73;
-    margin-bottom: 2rem;
+.title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  transform: skewY(-3deg);
+  color: #f2a6c1;
+}
+
+.projectsCarousel {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  transform: skewY(-3deg);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  width: 250px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-direction: column;
+
+  &:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 30px rgba(242, 166, 193, 0.4);
+
+    .description {
+      opacity: 1;
+      max-height: 200px;
+      pointer-events: auto;
+    }
   }
 
-  .slick-slide {
-    display: flex;
-    justify-content: center;
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #f2a6c1;
+    z-index: 1;
+  }
+}
+
+.description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  font-size: 0.9rem;
+  color: #ddd;
+  margin-top: 1rem;
+  text-align: left;
+
+  p {
+    margin-bottom: 0.5rem;
   }
 
-  .card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    max-width: 500px;
-    margin: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-    img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    h3 {
-      color: #d90060;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      color: #333;
-      font-size: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    a {
-      color: white;
-      background: #d90060;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      text-decoration: none;
-
-      &:hover {
-        background: #a30045;
-      }
-    }
+  span {
+    font-style: italic;
+    color: #aaa;
   }
 }
